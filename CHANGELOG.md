@@ -34,3 +34,14 @@ Format changelog mengikuti prinsip Keep a Changelog.
 Initial release of the Andaliman Core Engine Specification (AS-1.0 Alpha).
 
 ---
+## [Unreleased]
+
+### Added
+
+- Initial Specification Builder.
+- Runtime Specification Generator.
+- First successful runtime build.
+
+### Milestone
+
+The first successful Andaliman Core Engine build was completed.
