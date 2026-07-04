@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -5,7 +6,15 @@ SPEC_DIR = ROOT / "specification"
 OUTPUT_DIR = ROOT / "output"
 
 files = sorted(SPEC_DIR.glob("*.md"))
+build_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+header = f"""# Andaliman Runtime Specification
+
+Generated : {build_time}
+
+==========================================
+
+"""
 print(f"Found {len(files)} specification(s)\n")
 
 for file in files:
@@ -19,6 +28,7 @@ for file in files:
     )
 runtime = []
 
+runtime.append(header)
 runtime.append("# ANDALIMAN CORE ENGINE\n\n")
 
 for file in files:
